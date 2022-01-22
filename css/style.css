@@ -69,6 +69,7 @@ body {
 .animais h2 {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 1rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 1rem;
@@ -94,6 +95,10 @@ body {
   height: 370px;
   overflow-y: scroll;
   grid-column: 2;
+}
+
+.animais-lista li {
+  cursor: pointer;
 }
 
 .animais-lista::-webkit-scrollbar {
@@ -211,4 +216,24 @@ body {
     margin-bottom: 0px;
   }
 
+}
+
+.js .js-tabcontent section{
+  display: none;
+}
+
+.js-tabcontent section.ativo {
+  display: block !important;
+  animation: show .6s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
